@@ -38,7 +38,10 @@ class ViewController: UIViewController {
   @IBOutlet weak var roundLabel: UILabel!
   @IBOutlet weak var scoreLabel: UILabel!
   
-  let game = BullsEyeGame()
+  var targetValue = 0
+  
+  var game = BullsEyeGame(red: 122, green: 12, blue: 222, round: 22)
+  
   var rgb = RGB()
   
   @IBAction func aSliderMoved(sender: UISlider) {
@@ -46,7 +49,10 @@ class ViewController: UIViewController {
   }
   
   @IBAction func showAlert(sender: AnyObject) {
-
+    print("This is the \(game.red) : \(game.green) : \(game.blue) : round \(game.round)")
+    game.startNewRound()
+    print("This is the new game \(game.red) : \(game.green) : \(game.blue) : round \(game.round)")
+    
   }
   
   @IBAction func startOver(sender: AnyObject) {
@@ -59,6 +65,14 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  func startNewRound() {
+//    round += 1
+    targetValue = Int.random(in: 1...100)
+//    currentValue = 50
+//    slider.value = Float(currentValue)
+//    updateLabels()
   }
 }
 

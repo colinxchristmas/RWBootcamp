@@ -22,6 +22,41 @@
 
 import Foundation
 
-struct BullsEyeGame {  // might be class?
+class BullsEyeGame {  // might be class?
+  var red: Int = 0
+  var green: Int = 0
+  var blue: Int = 0
+  var round: Int = 0
+  
+  init(red: Int, green: Int, blue: Int, round: Int) {
+    self.red = red
+    self.green = green
+    self.blue = blue
+    self.round = round
 
+  }
+  
+//  func roundCount() {
+//    var round: Int
+//  }
+//
+//  func runningScore() {
+//    var score: Int
+//
+//  }
+  func randomColorCode() {
+    var _ = Int.random(in: 1...255)
+  }
+  func startNewRound() {
+//    round += 1
+//    targetValue = Int.random(in: 1...100)
+//    currentValue = 50
+//    slider.value = Float(currentValue)
+    self.red = 0
+    self.green = 0
+    self.blue = 0
+    self.round = 0
+  }
+  
+  
 }
