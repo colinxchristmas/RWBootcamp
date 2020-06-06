@@ -123,6 +123,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="J1q-Tv-9cH"/>
                     <connections>
                         <outlet property="blueLabelValue" destination="2fk-g8-Ksi" id="iaq-IS-bRy"/>
                         <outlet property="blueSlider" destination="xcW-v3-v4X" id="lwY-nl-ypK"/>
@@ -146,7 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTh-6D-wEd">
-                                <rect key="frame" x="20" y="33" width="374" height="566"/>
+                                <rect key="frame" x="20" y="32" width="374" height="566"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <viewLayoutGuide key="safeArea" id="a23-Vt-LlK"/>

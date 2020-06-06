@@ -27,4 +27,8 @@ class WikiViewController: UIViewController, WKUIDelegate {
       let request = URLRequest(url: myUrl!)
       webView.load(request)
     }
+  
+  @IBAction func closeButtonTapped(_sender: Any) {
+    self.dismiss(animated: true)
+  }
 }
