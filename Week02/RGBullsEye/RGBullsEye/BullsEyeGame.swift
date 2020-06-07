@@ -22,7 +22,7 @@
 
 import Foundation
 
-class BullsEyeGame {  // might be class?
+class BullsEyeGame { 
   var red: Int = 0
   var green: Int = 0
   var blue: Int = 0
@@ -38,22 +38,27 @@ class BullsEyeGame {  // might be class?
 
   }
   
+//  counts new round
   func roundCounter() {
     self.round += 1
   }
   
+//  clears round counter
   func roundReset() {
     self.round = 0
   }
-  
+
+// counts scores between rounds
   func runningScore(score: Int) {
     self.score += score
   }
   
+// generates random color codes between rounds and games
   func randomColorCode() -> Int {
    Int.random(in: 1...255)
   }
   
+// called at end of every round
   func startNewRound() {
     roundCounter()
     self.red = self.randomColorCode()
@@ -61,6 +66,7 @@ class BullsEyeGame {  // might be class?
     self.green = self.randomColorCode()
   }
   
+// called at beginning of every new game to clear old game data
   func startNewGame() {
     roundReset()
 //    targetValue = Int.random(in: 1...100)
