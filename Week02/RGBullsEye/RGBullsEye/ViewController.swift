@@ -40,7 +40,7 @@ class ViewController: UIViewController {
   
   var targetValue = 0
   
-  var game = BullsEyeGame(red: 122, green: 12, blue: 222, round: 22)
+  var game = BullsEyeGame(red: 122, green: 12, blue: 222, round: 0, score: 0)
   
   var rgb = RGB()
   
@@ -49,10 +49,14 @@ class ViewController: UIViewController {
   }
   
   @IBAction func showAlert(sender: AnyObject) {
-    print("This is the \(game.red) : \(game.green) : \(game.blue) : round \(game.round)")
-    game.startNewRound()
-    print("This is the new game \(game.red) : \(game.green) : \(game.blue) : round \(game.round)")
-    
+//    **Notice** Lines below here are set on purpose for testing function calls. Remove before final deployment.
+//    print("This is the start \(game.red) : \(game.green) : \(game.blue) : round \(game.round)")
+//
+//    game.startNewRound()
+//    print("This is the new round \(game.red) : \(game.green) : \(game.blue) : round \(game.round)")
+//
+//    game.startNewGame()
+//    print("This is the new game \(game.red) : \(game.green) : \(game.blue) : round \(game.round)")
   }
   
   @IBAction func startOver(sender: AnyObject) {

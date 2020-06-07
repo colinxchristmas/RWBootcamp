@@ -27,28 +27,42 @@ class BullsEyeGame {  // might be class?
   var green: Int = 0
   var blue: Int = 0
   var round: Int = 0
+  var score: Int = 0
   
-  init(red: Int, green: Int, blue: Int, round: Int) {
+  init(red: Int, green: Int, blue: Int, round: Int, score: Int) {
     self.red = red
     self.green = green
     self.blue = blue
     self.round = round
+    self.score = score
 
   }
   
-//  func roundCount() {
-//    var round: Int
-//  }
-//
-//  func runningScore() {
-//    var score: Int
-//
-//  }
-  func randomColorCode() {
-    var _ = Int.random(in: 1...255)
+  func roundCounter() {
+    self.round += 1
   }
+  
+  func roundReset() {
+    self.round = 0
+  }
+  
+  func runningScore(score: Int) {
+    self.score += score
+  }
+  
+  func randomColorCode() -> Int {
+   Int.random(in: 1...255)
+  }
+  
   func startNewRound() {
-//    round += 1
+    roundCounter()
+    self.red = self.randomColorCode()
+    self.blue = self.randomColorCode()
+    self.green = self.randomColorCode()
+  }
+  
+  func startNewGame() {
+    roundReset()
 //    targetValue = Int.random(in: 1...100)
 //    currentValue = 50
 //    slider.value = Float(currentValue)
@@ -57,6 +71,5 @@ class BullsEyeGame {  // might be class?
     self.blue = 0
     self.round = 0
   }
-  
   
 }
